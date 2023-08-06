@@ -1,0 +1,346 @@
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(to right, orange, purple);
+    padding: 10px 30px;
+    color: white;
+}
+
+.navicons a {
+    color: white;
+    margin-right: 10px;
+}
+
+.navcontact {
+    text-align: center;
+    border-left: 1px solid white;
+    padding: 0 20px;
+}
+
+.contactinfo {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.consultbutton {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 30px;
+    border-radius: 20px;
+    background-color: transparent;
+    transition: transform 0.3s, background-color 0.3s, color 0.3s;
+    border: 2px solid white;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+}
+
+.consultbutton::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.2);
+    transition: width 0.3s;
+    z-index: -1;
+}
+
+.consultbutton:hover::before {
+    width: 100%;
+}
+
+.consultbutton:hover {
+    background-color: white;
+    color: purple;
+    transform: scale(1.05);
+}
+
+.navbar-menu {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f7f7f7;
+    padding: 10px 30px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    color: #353231;
+    font-size: 19px;
+    font-weight: bold;
+}
+
+.navigation {
+    display: flex;
+}
+
+.navigation a {
+    text-decoration: none;
+    color: #333;
+    margin: 0 10px;
+    padding: 5px;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom-color 0.3s;
+}
+
+.navigation a:hover {
+    border-bottom-color: #555;
+}
+
+.searchbutton {
+    position: relative;
+}
+
+.searchicon {
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-radius: 50%;
+    background-color: #555;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.searchicon::before {
+    content: "\f002";
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+}
+
+.hero-section {
+    background-image: url('/images/background.jpg');
+    background-size: cover ;
+    height: 20rem;
+    background-position: center;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 110px 0px;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero-content h1 {
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+    padding-top: 50px;
+    font-size: 46px;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.hero-content p {
+    font-size: 18px;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+    margin-bottom: 40px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.buttons {
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.transparent-button,
+.filled-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: transform 0.3s, background-color 0.3s, color 0.3s;
+}
+
+.transparent-button {
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+}
+
+.transparent-button:hover {
+    background-color: white;
+    color: #555;
+    transform: scale(1.05);
+}
+
+.filled-button {
+    background-color: white;
+    color: #555;
+}
+
+.filled-button:hover {
+    background-color: #555;
+    color: white;
+    transform: scale(1.05);
+}
+
+.features-section {
+    background: linear-gradient(to right, orange, purple);
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 30px;
+    color: white;
+    text-align: center;
+}
+
+.feature {
+    flex: 1;
+    max-width: 325px;
+    padding: 20px;
+}
+
+.feature img {
+    width: 70px;
+    height: 70px;
+    margin-bottom: 10px;
+    border-radius: 50%;
+    background-color: white;
+    padding: 5px;
+}
+
+.feature h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.feature p {
+    font-size: 16px;
+}
+
+.about-section {
+    background-image: url('images/map.jpg');
+    background-size: cover;
+    height: 24rem;
+    background-position: center;
+    color: rgb(0, 0, 0);
+    display: flex;
+    padding: 115px 0;
+}
+
+.about-content {
+    flex: 1;
+    max-width: 50%;
+    padding-left: 55px;
+}
+
+.about-content h2 {
+    padding-left: 50px;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.about-content p {
+    padding-left: 50px;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.about-image {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.about-image img {
+    padding-right: 150px;
+    max-width: 100%;
+    max-height: 400px;
+}
+
+.read-more-button {
+    margin-left: 50px;
+    display: inline-block;
+    padding: 8px 30px;
+    background: linear-gradient(to right, orange, purple);
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: transform 0.3s, background-color 0.3s, color 0.3s;
+}
+
+.read-more-button:hover {
+    color: white;
+    transform: scale(1.10);
+}
+
+.services-section {
+    text-align: center;
+    padding: 50px 0;
+}
+
+.services-section h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+.services-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.service-card {
+    max-width: 300px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.service-card img {
+    width: 100%;
+    max-height: 200px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.service-card h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.service-card p {
+    font-size: 16px;
+    color: #666;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
